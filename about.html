@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас | Сучасний сайт</title>
+    <meta name="description" content="Дізнайтесь більше про нашу компанію та наші цінності">
+    <meta name="keywords" content="про нас, історія компанії, наша команда">
+
+    <meta property="og:title" content="Про нас | Сучасний сайт">
+    <meta property="og:description" content="Наша історія, місія та цінності">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andrey1243d.github.io/tutorial/about.html">
+    <meta property="og:image" content="https://andrey1243d.github.io/tutorial/images/about-preview.jpg">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Про нас",
+        "description": "Інформація про нашу компанію",
+        "url": "https://andrey1243d.github.io/tutorial/about.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">ВашЛого</a>
+                <nav class="nav">
+                    <a class="nav__link" href="index.html">Головна</a>
+                    <a class="nav__link active" href="about.html">Про нас</a>
+                    <a class="nav__link" href="services.html">Послуги</a>
+                </nav>
+                
+                <button class="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <section class="about-intro">
+            <div class="container">
+                <h1 class="about-title">Про нашу компанію</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Головна</a> / <span>Про нас</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Наша історія</h2>
+                        <p>Ми почали нашу діяльність у 2010 році як невелика команда ентузіастів. За роки роботи ми перетворились на надійного партнера для сотень клієнтів по всій Україні.</p>
+                        
+                        <h2>Наша місія</h2>
+                        <p>Ми прагнемо створювати якісні рішення, які допомагають нашим клієнтам розвивати бізнес та досягати успіху у своїй справі.</p>
+                        
+                        <h2>Наші цінності</h2>
+                        <ul class="values-list">
+                            <li>Професіоналізм у кожній деталі</li>
+                            <li>Інноваційний підхід</li>
+                            <li>Прозорість у співпраці</li>
+                            <li>Відповідальність перед клієнтами</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="images/team.jpg" alt="Наша команда" width="600" height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team">
+            <div class="container">
+                <h2 class="section-title">Наша команда</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="images/team1.jpg" alt="Іван Петренко, CEO" width="250" height="250" loading="lazy">
+                        <h3>Іван Петренко</h3>
+                        <p>CEO, Засновник</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team2.jpg" alt="Олена Сидорова, Дизайнер" width="250" height="250" loading="lazy">
+                        <h3>Олена Сидорова</h3>
+                        <p>Головний дизайнер</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team3.jpg" alt="Михайло Іванов, Розробник" width="250" height="250" loading="lazy">
+                        <h3>Михайло Іванов</h3>
+                        <p>Технічний директор</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="achievements">
+            <div class="container">
+                <h2 class="section-title">Наші досягнення</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-text">Задоволених клієнтів</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-text">Років досвіду</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-text">Проектів</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-text">Спеціалістів</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Про компанію</h3>
+                    <p>Ми створюємо якісні рішення для вашого бізнесу з 2010 року.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакти</h3>
+                    <p>м. Київ, вул. Прикладна, 123</p>
+                    <p>+380 12 345 6789</p>
+                    <p>info@yoursite.ua</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Соцмережі</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="30" height="30"></a>
+                        <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram" width="30" height="30"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year">2025</span> Мій сайт. Усі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
