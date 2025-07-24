@@ -1,99 +1,184 @@
-/* Общие стили */
+/* Базові стилі */
+:root {
+    --primary: #3498db;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --white: #ffffff;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background: var(--light);
 }
 
 .container {
-  max-width: 500px;
-  width: 90%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px 0 rgba(37, 37, 46, 0.4);
-  backdrop-filter: blur(10px);
-  padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.form-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 8px 32px 0 rgba(37, 37, 46, 0.4);
-  transition: all 0.3s ease-in-out;
+/* Шапка */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Вкладки */
-input[type="radio"] {
-  display: none;
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-label {
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  padding: 15px 30px;
-  font-weight: bold;
-  background: #f1f1f1;
-  transition: all 0.3s ease-in-out;
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
 }
 
-label:hover {
-  background: #e0e0e0;
+.nav {
+    display: flex;
 }
 
-/* Анимация перехода между формами */
-input[type="radio"]:checked + label {
-  background: #667eea;
-  color: white;
+.nav__link {
+    margin-left: 30px;
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.form {
-  display: none;
-  padding: 20px;
-  transition: opacity 0.3s ease-in-out;
+.nav__link:hover {
+    color: var(--primary);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: none;
-  background: #f1f1f1;
-  border-radius: 8px;
-  font-size: 16px;
+/* Бургер-меню (для мобільних) */
+.burger {
+    display: none;
+    cursor: pointer;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  background: #667eea;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--dark);
+    margin: 5px 0;
+    transition: 0.4s;
 }
 
-button:hover {
-  background: #5a6fd4;
-  transform: scale(1.02);
+/* Основні секції */
+.intro {
+    padding: 150px 0 100px;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/bg.jpg');
+    background-size: cover;
+    color: var(--white);
 }
 
-/* Активная форма */
-input[type="radio"]:checked ~ .form {
-  display: block;
+.intro__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.intro__text {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.features {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.features__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Підвал */
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .feature {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .intro__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature {
+        flex: 0 0 100%;
+    }
+    
+    .intro {
+        padding: 120px 0 80px;
+    }
 }

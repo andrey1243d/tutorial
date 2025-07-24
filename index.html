@@ -1,43 +1,97 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Форма регистрации</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сучасний сайт | Головна</title>
+    <meta name="description" content="Опис вашого сайту для SEO">
+    <meta name="keywords" content="ключові, слова, для, пошуку">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Сучасний сайт">
+    <meta property="og:description" content="Приклад адаптивного сайту">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://вашgithub.io/сайт">
+    <meta property="og:image" content="images/preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="form-wrapper">
-      <!-- Регистрация -->
-      <input type="radio" name="toggle-form" id="register" checked />
-      <label for="register">Зарегистрироваться</label>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">ВашЛого</div>
+                <nav class="nav">
+                    <a class="nav__link" href="#">Головна</a>
+                    <a class="nav__link" href="#">Про нас</a>
+                    <a class="nav__link" href="#">Послуги</a>
+                    <a class="nav__link" href="#">Контакти</a>
+                </nav>
+                
+                <!-- Бургер-меню для мобільних -->
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <!-- Вход -->
-      <input type="radio" name="toggle-form" id="login" />
-      <label for="login">Войти</label>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1 class="intro__title">Ласкаво просимо на наш сайт</h1>
+                <p class="intro__text">Тут ви знайдете все необхідне для вашого бізнесу</p>
+                <a href="#" class="btn">Детальніше</a>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Наші переваги</h2>
+                <div class="features__inner">
+                    <div class="feature">
+                        <img src="images/icon1.svg" alt="Іконка" loading="lazy">
+                        <h3>Якість</h3>
+                        <p>Найкращі рішення для вашого бізнесу</p>
+                    </div>
+                    <div class="feature">
+                        <img src="images/icon2.svg" alt="Іконка" loading="lazy">
+                        <h3>Надійність</h3>
+                        <p>Гарантований результат</p>
+                    </div>
+                    <div class="feature">
+                        <img src="images/icon3.svg" alt="Іконка" loading="lazy">
+                        <h3>Швидкість</h3>
+                        <p>Реалізація в найкоротші терміни</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <!-- Форма регистрации -->
-      <div class="form register">
-        <h2>Регистрация</h2>
-        <form action="#" method="post">
-          <input type="text" name="username" placeholder="Имя" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="password" placeholder="Пароль" required />
-          <button type="submit">Зарегистрироваться</button>
-        </form>
-      </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ваш сайт. Усі права захищені.</p>
+        </div>
+    </footer>
 
-      <!-- Форма входа -->
-      <div class="form login">
-        <h2>Вход</h2>
-        <form action="#" method="post">
-          <input type="email" name="login-email" placeholder="Email" required />
-          <input type="password" name="login-password" placeholder="Пароль" required />
-          <button type="submit">Войти</button>
-        </form>
-      </div>
-    </div>
-  </div>
+    <!-- JS -->
+    <script src="main.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ВАШID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ВАШID');
+    </script>
 </body>
 </html>
