@@ -1,65 +1,99 @@
-/* style.css */
-body {
+/* Общие стили */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  color: #fff;
 }
 
 .container {
+  max-width: 500px;
+  width: 90%;
   background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  text-align: center;
-  animation: fadeIn 1s ease;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(37, 37, 46, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
 }
 
-input {
-  padding: 10px;
-  width: 250px;
+.form-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba(37, 37, 46, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Вкладки */
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-weight: bold;
+  background: #f1f1f1;
+  transition: all 0.3s ease-in-out;
+}
+
+label:hover {
+  background: #e0e0e0;
+}
+
+/* Анимация перехода между формами */
+input[type="radio"]:checked + label {
+  background: #667eea;
+  color: white;
+}
+
+.form {
+  display: none;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
   border: none;
-  border-radius: 10px;
-  margin: 20px 0;
+  background: #f1f1f1;
+  border-radius: 8px;
   font-size: 16px;
 }
 
 button {
-  background-color: #fff;
-  color: #764ba2;
+  width: 100%;
+  padding: 15px;
+  background: #667eea;
+  color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  transform: scale(1.1);
-  background-color: #f3f3f3;
+  background: #5a6fd4;
+  transform: scale(1.02);
 }
 
-#output {
-  padding: 20px;
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 10px;
-  margin-top: 20px;
-  font-size: 24px;
-  animation: popIn 0.6s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes popIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+/* Активная форма */
+input[type="radio"]:checked ~ .form {
+  display: block;
 }
